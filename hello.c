@@ -3,6 +3,7 @@
 #include <pthread.h>
 
 #define ROWS 1000
+#define THREADS 2
 
 // Speichert alle Threaddaten um sie zu übergeben
 struct thread_struct{
@@ -119,7 +120,7 @@ int main(){
   fillZeroMatrix(resMatrix,ROWS);
   //printMatrix(matrix,ROWS);
   //printMatrix(resMatrix,ROWS);
-  threading(matrix, resMatrix,ROWS, 4);
+  threading(matrix, resMatrix,ROWS,THREADS);
  // multiplyRowCol(matrix,resMatrix,ROWS,0,0);
  // printMatrix(resMatrix,ROWS);
   return 0;
